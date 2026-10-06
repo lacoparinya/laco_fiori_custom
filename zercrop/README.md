@@ -1,42 +1,35 @@
-## Application Details
-|               |
-| ------------- |
-|**Generation Date and Time**<br>Tue Sep 15 2026 16:05:52 GMT+0700 (Indochina Time)|
-|**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.32.0|
-|**Generation Platform**<br>Visual Studio Code|
-|**Template Used**<br>List Report Page V2|
-|**Service Type**<br>SAP System (ABAP On-Premise)|
-|**Service URL**<br>https://vhlnwds4ap01.sap.lannaagro.com:44300/sap/opu/odata/sap/ZUI_TMM_ER_CROP_V4|
-|**Module Name**<br>zercrop|
-|**Application Title**<br>ER Crop|
-|**Namespace**<br>com.lannaagro.zlaco|
-|**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.136.0|
-|**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>True, see https://www.npmjs.com/package/@sap-ux/eslint-plugin-fiori-tools#rules for the eslint rules.|
-|**Main Entity**<br>ErCrop|
+# ER Crop (zercrop)
 
-## zercrop
+แอป SAP Fiori สำหรับดูข้อมูลฤดูกาลเพาะปลูก (Crop Master) ว่าแต่ละ crop ใช้เมล็ดพันธุ์และวัสดุอะไร และมีช่วงวันที่เท่าไร
 
-An SAP Fiori application. ER Crop
+## ทำอะไรได้บ้าง
 
-### Starting the generated app
+- **List Report:** แสดงรายการ crop เป็นตาราง กรองและค้นหาได้ ตัวกรองวันที่เลือกเป็นช่วงได้ และบันทึก variant ได้
+- **Object Page:** ดูรายละเอียดของแต่ละ crop ได้แก่
+  - Crop Code / Crop Name
+  - Seed Code / Material
+  - วันเริ่มและวันสิ้นสุดของ crop (Crop Start / End)
+  - ช่วงวันที่มีผล (Valid From / Valid To)
 
--   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated application, run the following from the generated application root folder:
+## ข้อมูลทางเทคนิค
 
+| รายการ | ค่า |
+| --- | --- |
+| Template | List Report / Object Page (OData V2) |
+| App ID | `com.lannaagro.zlaco.zercrop` |
+| OData Service | `/sap/opu/odata/sap/ZUI_TMM_ER_CROP_V4/` |
+| Entity หลัก | `ErCrop` |
+| BSP App / Package | `ZTMMERCROP` / `ZDEV` |
+| UI5 Version | 1.136.0 |
+
+หน้าจอทั้งหมดสร้างจาก annotation (`webapp/annotations/annotation.xml`) และไม่มี custom code
+
+## คำสั่งที่ใช้บ่อย
+
+```bash
+npm install          # ติดตั้ง dependency
+npm start            # รันแอปโดยต่อกับ SAP backend
+npm run start-mock   # รันแอปด้วย mock data
+npm run build        # build ไปที่ dist/
+npm run deploy       # build แล้ว deploy ขึ้น ABAP repository
 ```
-    npm start
-```
-
-- It is also possible to run the application using mock data that reflects the OData Service URL supplied during application generation.  In order to run the application with Mock Data, run the following from the generated app root folder:
-
-```
-    npm run start-mock
-```
-
-#### Pre-requisites:
-
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
-
-
