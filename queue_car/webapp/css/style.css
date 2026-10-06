@@ -1,0 +1,90 @@
+html, body, #container, #container-uiarea {
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ให้ Page ไม่มี scroll และเนื้อหาเต็มพื้นที่ที่เหลือ (ใต้ shell header) */
+.queuePage .sapMPageEnableScrolling,
+.queuePage section {
+    height: 100%;
+    overflow: hidden !important;
+}
+
+.gridContainer {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100% !important;
+    height: 100% !important;
+    gap: 1.2vmin;
+    padding: 1.2vmin;
+    box-sizing: border-box;
+    background-color: #1a1d20; /* ธีมมืด สบายตาสำหรับจอแสดงผล */
+}
+
+.queueCard {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* สีพื้นหลังแยกแต่ละช่อง */
+.q1 { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+.q2 { background: linear-gradient(135deg, #11998e, #38ef7d); }
+.q3 { background: linear-gradient(135deg, #d35400, #f39c12); }
+.q4 { background: linear-gradient(135deg, #8e44ad, #c0392b); }
+
+/* ขนาดตัวอักษรย่อ/ขยายตามขนาดจอ */
+.queueTitle {
+    font-size: clamp(1.2rem, 4vmin, 3rem) !important;
+    font-weight: 700;
+    margin-bottom: 1vmin;
+    color: #f1f2f6 !important;
+}
+
+.carNumber {
+    font-size: clamp(2.5rem, 13vmin, 10rem) !important; /* ทะเบียนรถตัวใหญ่ชัดเจน */
+    line-height: 1.1 !important;
+    font-weight: 900;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.subDetails {
+    margin-top: 1.5vmin;
+}
+
+.subDetails .sapMText {
+    font-size: clamp(1.5rem, 6vmin, 5rem) !important;
+    color: #ecf0f1 !important;
+    white-space: nowrap;
+}
+
+/* แถบสถานะ + ปุ่มรีเฟรช ลอยมุมขวาล่าง */
+.refreshBar {
+    position: fixed;
+    right: 2vmin;
+    bottom: 2vmin;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 10;
+}
+
+.refreshStatus.sapMText {
+    color: #ecf0f1 !important;
+    font-size: 0.875rem;
+    margin-right: 0.25rem;
+}
+
+.refreshButton .sapMBtnIcon {
+    color: #ffffff !important;
+}

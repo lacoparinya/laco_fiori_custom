@@ -1,0 +1,23 @@
+{
+  "generationParameters": {
+    "generationDate": "Mon Oct 05 2026 17:02:44 GMT+0700 (Indochina Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://vhlnwds4ap01.sap.lannaagro.com:44300/sap/opu/odata/sap/ZSB_TMM_WE_QUEUE_O2",
+    "appName": "queue_car",
+    "appTitle": "Queue Car",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "com.lannaagro.zdev",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.136.0",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.32.0",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

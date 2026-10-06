@@ -1,0 +1,64 @@
+<mvc:View controllerName="com.lannaagro.zdev.queuecar.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+    height="100%">
+    <Page id="page" showHeader="false" enableScrolling="false" class="queuePage">
+        <content>
+            <!-- 2x2 Grid Container -->
+            <HBox width="100%" height="100%" class="gridContainer">
+                
+                <!-- แถวบน: คิว 01 (ซ้าย) | คิว 02 (ขวา) -->
+                <!-- แถวล่าง: คิว 03 (ซ้าย) | คิว 04 (ขวา) -->
+                
+                <!-- Queue 01 : บนซ้าย -->
+                <VBox class="queueCard q1" justifyContent="Center" alignItems="Center">
+                    <Title text="ช่อง 01" class="queueTitle" />
+                    <Text text="{display>/q1/ZcarNo}" class="carNumber" />
+                    <HBox class="subDetails">
+                        <Text text="บ้าน: {display>/q1/Zvillage}" />
+                    </HBox>
+                </VBox>
+
+                <!-- Queue 02 : บนขวา -->
+                <VBox class="queueCard q2" justifyContent="Center" alignItems="Center">
+                    <Title text="ช่อง 02" class="queueTitle" />
+                    <Text text="{display>/q2/ZcarNo}" class="carNumber" />
+                    <HBox class="subDetails">
+                        <Text text="บ้าน: {display>/q2/Zvillage}" />
+                    </HBox>
+                </VBox>
+
+                <!-- Queue 03 : ล่างซ้าย -->
+                <VBox class="queueCard q3" justifyContent="Center" alignItems="Center">
+                    <Title text="ช่อง 03" class="queueTitle" />
+                    <Text text="{display>/q3/ZcarNo}" class="carNumber" />
+                    <HBox class="subDetails">
+                        <Text text="บ้าน: {display>/q3/Zvillage}" />
+                    </HBox>
+                </VBox>
+
+                <!-- Queue 04 : ล่างขวา -->
+                <VBox class="queueCard q4" justifyContent="Center" alignItems="Center">
+                    <Title text="ช่อง 04" class="queueTitle" />
+                    <Text text="{display>/q4/ZcarNo}" class="carNumber" />
+                    <HBox class="subDetails">
+                        <Text text="บ้าน: {display>/q4/Zvillage}" />
+                    </HBox>
+                </VBox>
+
+            </HBox>
+
+            <!-- แถบสถานะมุมขวาล่าง: เวลาอัปเดตล่าสุด + ปุ่มรีเฟรช -->
+            <HBox class="refreshBar" alignItems="Center">
+                <Text text="{state>/status}" class="refreshStatus" />
+                <Button icon="sap-icon://refresh"
+                    tooltip="รีเฟรชข้อมูล"
+                    type="Transparent"
+                    enabled="{= !${state>/busy} }"
+                    press=".onRefresh"
+                    class="refreshButton" />
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>

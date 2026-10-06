@@ -1,0 +1,28 @@
+{
+  "generationParameters": {
+    "generationDate": "Tue Sep 15 2026 16:05:52 GMT+0700 (Indochina Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://vhlnwds4ap01.sap.lannaagro.com:44300/sap/opu/odata/sap/ZUI_TMM_ER_CROP_V4",
+    "appName": "zercrop",
+    "appTitle": "ER Crop",
+    "appDescription": "An SAP Fiori application. ER Crop",
+    "appNamespace": "com.lannaagro.zlaco",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.136.0",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.32.0",
+    "template": "List Report Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "ErCrop"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
